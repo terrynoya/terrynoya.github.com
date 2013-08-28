@@ -9,41 +9,9 @@
   <meta name="author" content="terrynoya">
 
   
-  <meta name="description" content="Say Hello World Text Body (AppDelegate.cpp) download 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35 &hellip;">
+  <meta name="description" content="1.please define NDK_ROOT 错误
+解决方法：在build_native.sh中添加 ndk_root1
+export NDK_ROOT=&quot;/Users/terrynoya/ProgramFiles/android-ndk-r8e&quot; 假设&lt; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,6 +67,64 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/28/cocos2d-x-android-gou-jian-de-na-xie-keng/">Cocos2d-x Android 构建的那些坑</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-28T19:50:00+08:00" pubdate data-updated="true">Aug 28<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>1.please define NDK_ROOT 错误
+解决方法：在build_native.sh中添加</p>
+
+<figure class='code'><figcaption><span>ndk_root</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">NDK_ROOT</span><span class="o">=</span><span class="s2">&quot;/Users/terrynoya/ProgramFiles/android-ndk-r8e&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>假设&lt;cocos_path>是你的cocos2dx源代码所在的路径，查找以下代码并替换cocos2dx路径</p>
+
+<figure class='code'><figcaption><span>替换ndk路径</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">COCOS2DX_ROOT</span><span class="o">=</span><span class="s2">&quot;$DIR/../..&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>为：</p>
+
+<figure class='code'><figcaption><span>替换cocos2dx路径</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">COCOS2DX_ROOT</span><span class="o">=</span><span class="s2">&quot;&lt;cocos_path&gt;&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -339,6 +365,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/08/28/cocos2d-x-android-gou-jian-de-na-xie-keng/">Cocos2d-x Android 构建的那些坑</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/08/25/hello-world/">Hello_world</a>

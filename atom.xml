@@ -4,7 +4,7 @@
   <title><![CDATA[Terrynoya 的技术BLOG]]></title>
   <link href="http:///atom.xml" rel="self"/>
   <link href="http:///"/>
-  <updated>2013-08-26T00:16:27+08:00</updated>
+  <updated>2013-08-28T19:59:10+08:00</updated>
   <id>http:///</id>
   <author>
     <name><![CDATA[terrynoya]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[cocos2d-x android 构建的那些坑]]></title>
+    <link href="http:///blog/2013/08/28/cocos2d-x-android-gou-jian-de-na-xie-keng/"/>
+    <updated>2013-08-28T19:50:00+08:00</updated>
+    <id>http:///blog/2013/08/28/cocos2d-x-android-gou-jian-de-na-xie-keng</id>
+    <content type="html"><![CDATA[<p>1.please define NDK_ROOT 错误
+解决方法：在build_native.sh中添加</p>
+
+<figure class='code'><figcaption><span>ndk_root</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">NDK_ROOT</span><span class="o">=</span><span class="s2">&quot;/Users/terrynoya/ProgramFiles/android-ndk-r8e&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>假设&lt;cocos_path>是你的cocos2dx源代码所在的路径，查找以下代码并替换cocos2dx路径</p>
+
+<figure class='code'><figcaption><span>替换ndk路径</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">COCOS2DX_ROOT</span><span class="o">=</span><span class="s2">&quot;$DIR/../..&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>为：</p>
+
+<figure class='code'><figcaption><span>替换cocos2dx路径</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">COCOS2DX_ROOT</span><span class="o">=</span><span class="s2">&quot;&lt;cocos_path&gt;&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[hello_world]]></title>
